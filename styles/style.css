@@ -91,10 +91,7 @@ header .welcome {
     text-align: left;
     
 }
-.animate-on-scroll {
-    opacity: 0;
-    animation: fadeInFromLeft 2s ease-in-out forwards;
-}
+
 .welcome-first-row__first-item, .welcome-second-row{
     overflow-y: hidden;
     opacity: 0;
@@ -133,17 +130,33 @@ header .welcome {
     margin-bottom: 6%;
 }
 .header-content__left .button{
-    padding: 2% 3%;
-    border: 1px solid #2e2e2e;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: #2e2e2e 1px solid;
+    background-color: #ccbe3f;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+.button:hover {
+    letter-spacing: 3px;
     background-color: #2e2e2e;
     color: #ccbe3f;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: box-shadow .4s ease-in-out;
+    box-shadow: #2e2e2e 0px 7px 29px 0px;
 }
-.header-content__left .button:hover{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  
+.button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+.header-content__left .button i{
+    margin-right: 2%;
 }
 .header-content__right{
     flex-basis: 40%;
