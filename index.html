@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>GG Brand Design | Anasayfa</title>
+  </head>
+  <body>
+    <header>
+      <div id="welcome" class="welcome">
+        <div class="welcome-first-row">
+          <span class="welcome-first-row__first-item">GG</span>
+          <span class="welcome-first-row__second-item">Brand</span>
+        </div>
+        <div class="welcome-second-row">
+          <span>Design</span>
+          <div class="loader" style="margin-left: 5%;"></div>
+        </div>
+      </div>
+      <div class="header-content">
+        <div id="header-content__left" class="header-content__left">
+          <h1>GG Brand Design</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            aliquam praesentium. Natus veritatis iure voluptatibus cum
+            praesentium. Magnam libero expedita, aperiam iste beatae accusamus,
+            sit error facere debitis facilis ipsa necessitatibus velit amet
+            fugiat. Officiis magnam doloremque consequatur quae exercitationem
+            eius. Odit eveniet quidem dignissimos quaerat quasi! Magni, repellat
+            soluta.
+          </p>
+          <span class="button">Bize Ulaşın</span>
+        </div>
+        <div id="header-content__right" class="header-content__right">
+          <div class="header-content__right-box">
+                <span>300*300</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      const welcomeElement = document.getElementById("welcome");
+
+      welcomeElement.addEventListener("animationend", () => {
+        setTimeout(() => {
+          welcomeElement.style.display = "none";
+        }, 1800);
+      });
+    </script>
+  </body>
+</html>
