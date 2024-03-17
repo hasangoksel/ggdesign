@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 *{
     font-size: 17px;
     margin: 0;
@@ -335,4 +334,48 @@ button {
     width: 300px;
     height: 200px;
     border: 1px solid #2e2e2e;
+}
+.main-our-services{
+    height: 100vh;
+    width: 100vw;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+.swiper-button-prev,
+.swiper-button-next{
+    top: initial;
+    bottom: 0;
+    font-size: 1.5rem;
+}
+.swiper-wrapper{
+    display: grid;
+    row-gap: 6;
+    place-items: center;
+    margin: 3rem;
+}
+.swiper{
+    margin-inline: initial;
+    background: url(/assets/mmmotif.jpg);
+    margin-top: 12rem;
+}
+.swiper-slide{
+    height: 500px !important;
+}
+.main-our-services__content_card{
+    width: 400px;
+    height: 350px;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+
+}
+@media screen and (min-width: 768px) {
+    .swiper-slide-active{
+        scale:1;
+    }
 }
