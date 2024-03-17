@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/swiper.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>GG Brand Design | Anasayfa</title>
   </head>
   <body>
@@ -142,16 +146,47 @@
               </div>
             </div>
           </div>
-          <div class="swiper-button-prev">
-            <i class="ri-arrow-left-line"></i>
+          <div id="color-prev" class="swiper-button-prev">
+            <i class="ri-arrow-left-line" style="color: black;"></i>
           </div>
-          <div class="swiper-button-next">
-            <i class="ri-arrow-right-line"></i>
+          <div id="color-next" class="swiper-button-next">
+            <i class="ri-arrow-right-line"  style="color: black;"></i>
           </div>
         </div>
       </div>
     </main>
-    <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+const swiperOurServices = new Swiper('.swiper', {
+    loop: true,
+    grabCursor:true,
+    slidesPerView:3,
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints:{
+        964:{
+            slidesPerView:3,
+            centeredSlides:'auto',
+        },
+        1884:{
+            centeredSlides:'auto',
+            spaceBetween:32,
+        }
+    }
+
+});
+const welcomeElement = document.getElementById("welcome");
+
+welcomeElement.addEventListener("animationend", () => {
+  setTimeout(() => {
+    welcomeElement.style.display = "none";
+  }, 1800);
+});
+    </script>
+   
     <script src="./js/main.js"></script>
   </body>
 </html>

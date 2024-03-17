@@ -337,7 +337,22 @@ button {
 }
 .main-our-services{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+}
+
+.swiper-wrapper{
+    display: grid;
+    row-gap: 6;
+    place-items: center;
+    margin: 3rem;
+}
+:root{
+    --black-color: #2e2e2e;
+}
+.swiper{
+    margin-inline: initial;
+    background: url('../assets/mmmotif.jpg');
+    margin-top: 12rem;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after{
@@ -345,27 +360,18 @@ button {
 }
 .swiper-button-prev,
 .swiper-button-next{
-    top: initial;
-    bottom: 0;
-    font-size: 1.5rem;
+    font-size: 18px;
+    color: var(--black-color);
 }
-.swiper-wrapper{
-    display: grid;
-    row-gap: 6;
-    place-items: center;
-    margin: 3rem;
-}
-.swiper{
-    margin-inline: initial;
-    background: url(/assets/mmmotif.jpg);
-    margin-top: 12rem;
+#color-prev, #color-next{
+    color: var(--black-color);
 }
 .swiper-slide{
     height: 500px !important;
 }
 .main-our-services__content_card{
-    width: 400px;
-    height: 350px;
+    width: 350px;
+    height: 400px;
     background: rgba(255,255,255,.05);
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
     backdrop-filter: blur(10px);
@@ -376,6 +382,6 @@ button {
 }
 @media screen and (min-width: 768px) {
     .swiper-slide-active{
-        scale:1;
+        scale: 1.15;
     }
 }
