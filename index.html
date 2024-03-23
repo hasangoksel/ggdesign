@@ -6,13 +6,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    /> 
     <link rel="stylesheet" href="./styles/style.css" />
     <title>GG Brand Design | Anasayfa</title>
   </head>
@@ -160,24 +154,16 @@
       </div>
     </main>
     <section class="references">
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          ...
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+      <div class="references__title">
+        <h2>Referanslarımız</h2>
+      </div>
+      <div class="references__content">
+        <img src="./assets/logo.svg" alt="">
+        <img src="./assets/logo1.svg" alt="">
+        <img src="./assets/logo2.svg" alt="">
+        <img src="./assets/logo4.svg" alt="">
+        <img src="./assets/logo5.svg" alt="">
+        <img src="./assets/logo.svg" alt="">
       </div>
     </section>
     <script>
@@ -187,39 +173,6 @@
         setTimeout(() => {
           welcomeElement.style.display = "none";
         }, 1800);
-      });
-    </script>
-    <script>
-      let swiper = new Swiper(".swiper", {
-        loop: true,
-        grabCursor: true,
-        slidesPerView: 'auto',
-        // If we need pagination
-        // pagination: {
-        //   el: ".swiper-pagination",
-        // },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints:{
-          768:{
-            slidesPerView: 3,
-            centeredSlides: 'auto'
-          },
-          1152:{
-            centeredSlides: 'auto',
-            spaceBetween: -64,
-          }
-        }
-
-        // And if we need scrollbar
-        // scrollbar: {
-        //   el: ".swiper-scrollbar",
-        // },
       });
     </script>
   </body>
