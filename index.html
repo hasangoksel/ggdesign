@@ -6,7 +6,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    /> 
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>GG Brand Design | Anasayfa</title>
   </head>
@@ -22,6 +22,20 @@
           <div class="loader" style="margin-left: 5%;"></div>
         </div>
       </div>
+      <nav class="nav">
+        <div class="nav-logo">
+          <img
+            src="./assets/gg brand design yeni logo v2-03.png"
+            alt="GG Brand Design Logo"
+          />
+        </div>
+        <div class="nav-link">
+          <a href="#" class="nav-link__item active"> Anasayfa </a>
+          <a href="#" class="nav-link__item"> Portfolyo </a>
+          <a href="#" class="nav-link__item"> Blog </a>
+          <a href="#" class="nav-link__item"> İletişim </a>
+        </div>
+      </nav>
       <div class="header-content">
         <div id="header-content__left" class="header-content__left">
           <h1>GG Brand Design</h1>
@@ -158,17 +172,17 @@
         <h2>Referanslarımız</h2>
       </div>
       <div class="references__content">
-        <img src="./assets/logo.svg" alt="">
-        <img src="./assets/logo1.svg" alt="">
-        <img src="./assets/logo2.svg" alt="">
-        <img src="./assets/logo3.svg" alt="">
-        <img src="./assets/logo4.svg" alt="">
-        <img src="./assets/logo5.svg" alt="">
+        <img src="./assets/logo.svg" alt="" />
+        <img src="./assets/logo1.svg" alt="" />
+        <img src="./assets/logo2.svg" alt="" />
+        <img src="./assets/logo3.svg" alt="" />
+        <img src="./assets/logo4.svg" alt="" />
+        <img src="./assets/logo5.svg" alt="" />
       </div>
     </section>
     <footer>
       <div class="address">
-        <img src="./assets/gg brand design yeni logo v2-03.png" alt="GG Design Logo">
+        <img src="./assets/just-vector-logo-v1-03.png" alt="GG Design Logo" />
         <div class="address__location">
           <i class="fa-solid fa-compass"></i>
           <span>Lorem ipsum, dolor sit amet consectetur adipisicing.</span>
@@ -186,7 +200,11 @@
       </div>
       <div class="bio">
         <h3 class="bio__title">Hakkımızda</h3>
-        <p class="bio__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis ea explicabo deleniti excepturi modi voluptas optio quis tenetur dolorem cumque deserunt harum quia facere obcaecati, est voluptates amet qui.</p>
+        <p class="bio__content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis ea
+          explicabo deleniti excepturi modi voluptas optio quis tenetur dolorem
+          cumque deserunt harum quia facere obcaecati, est voluptates amet qui.
+        </p>
       </div>
       <div class="social-media">
         <div class="social-media__title">
@@ -208,6 +226,28 @@
           welcomeElement.style.display = "none";
         }, 1800);
       });
+    </script>
+    <script>
+    document.addEventListener("scroll", function () {
+    let scrollValue = window.scrollY;
+    let content = document.querySelector("nav");
+    let navLogo = document.querySelector(".nav-logo");
+    let links = document.querySelectorAll(".nav-link__item");
+
+    if (scrollValue > 200) {
+        content.classList.add("scrolled");
+        navLogo.style.backgroundColor = "";
+        links.forEach(function(link) {
+            link.classList.add("scrolledLink");
+        });
+    } else {
+        content.classList.remove("scrolled");
+        links.forEach(function(link) {
+            link.classList.remove("scrolledLink");
+        });
+    }
+});
+
     </script>
   </body>
 </html>
